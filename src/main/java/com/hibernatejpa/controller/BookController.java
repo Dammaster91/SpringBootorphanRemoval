@@ -33,6 +33,7 @@ public class BookController {
 	@RequestMapping(value = "/{bookId}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public String deleteBook(@PathVariable int bookId) {
+		
 		String bookResponse = bookService.removeStoryFromBook(bookId);
 
 		return bookResponse;
